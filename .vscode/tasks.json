@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build and Run C++",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "cd '${fileDirname}'; g++ -o '${fileBasenameNoExtension}' '${file}'; & '.\\${fileBasenameNoExtension}.exe'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
